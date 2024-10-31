@@ -11,10 +11,10 @@
  		if (j<=1){ //if condition applied 
  			v=j; //condition applied 
  		}
- 		else{ //else not applicable condition applied
- 			v=a+b;
- 			a=b;
- 			b=v;
+ 		else{ //in else part of the code not applicable condition applied
+ 			v=a+b; //v variable contains a plus b sum
+ 			a=b; // then variable a equals to variable b 
+ 			b=v; // again then b variable equally matched to main starting variable v 
  		}
  		printf("%d ",v); //printed variable v 
  	}
