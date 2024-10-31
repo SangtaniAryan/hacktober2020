@@ -1,41 +1,41 @@
-#include<stdio.h>
+#include<stdio.h> //header files included in code
 
-#include<unistd.h>
- #include<sys/types.h>
- void childprocess(unsigned long long int k)
+#include<unistd.h> //Universal standard header files
+ #include<sys/types.h> //system types header files inc
+ void childprocess(unsigned long long int k) //void with integer return type 
  {
- 	int v;
- 	int a=0;
- 	int b=1;
- 	for (int j=0;j<k;j++){
- 		if (j<=1){
- 			v=j;
+ 	int v; // integer variable v created 
+ 	int a=0; // another variable a with integer data type created
+ 	int b=1; // same as variable a
+ 	for (int j=0;j<k;j++){ //for loop used with integer variable j created with condotion 
+ 		if (j<=1){ //if condition applied 
+ 			v=j; //condition applied 
  		}
- 		else{
+ 		else{ //else not applicable condition applied
  			v=a+b;
  			a=b;
  			b=v;
  		}
- 		printf("%d ",v);
+ 		printf("%d ",v); //printed variable v 
  	}
- 	printf("\n");
+ 	printf("\n"); //print new line empty blank line
  }
 
  	
- void main(void)
+ void main(void) 
  {
  	pid_t pid;
- 	unsigned long long int i;
- 	scanf("%lld",&i);
+ 	unsigned long long int i; //long integer used
+ 	scanf("%lld",&i); //scanning the variable i
  	pid=fork();
  	//t=getpid();
- 	if (pid==0){
- 		printf("Child process is calling Fibonacci\n");
+ 	if (pid==0){ //if condition applied
+ 		printf("Child process is calling Fibonacci\n"); //title printed for output results if .. if condition is true
  		childprocess(i);
- 		printf("Child process has ended\n");
+ 		printf("Child process has ended\n"); //output statment if .. if condition is true 
  	}
- 	else{
- 		printf("This is parent process\n Parent process has ended\n");
+ 	else{ //else part of the code
+ 		printf("This is parent process\n Parent process has ended\n"); //statement will print if .. if condition is false
  	
  	}
  }
